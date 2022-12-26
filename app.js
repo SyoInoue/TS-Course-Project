@@ -1,12 +1,13 @@
-console.log("ここにコードを追加します。");
-var person = {
-    name: "yota",
-    age: 30,
-    hobbies: ["sports", "cooking"]
-};
-var favoriteActivities;
-favoriteActivities = ["Sports"];
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby.toUpperCase());
+//unknown型。なんの型になるかわからない。
+var userInput;
+var userName;
+userInput = 5;
+userInput = "max";
+if (typeof userInput === "string") {
+    userName = userInput;
 }
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+var result = generateError("エラーが発生しました。", 500);
+console.log(result);
