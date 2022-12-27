@@ -1,10 +1,13 @@
-function add(n1: number, n2: number): number {
+function add(n1: number, n2: number) {
   return n1 + n2;
 }
 // void型
-function printResult(num: number): void {
+function printResult(num: number) {
   console.log("Result: " + num);
 }
+
+printResult(add(5, 12));
+
 // コールバック関数の型
 function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
   const result = n1 + n2;
@@ -21,4 +24,3 @@ let combineValues: (a: number, b: number) => number; //関数型
 combineValues = add;
 
 console.log(combineValues(8, 8));
-printResult(add(5, 12));
